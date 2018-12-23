@@ -4,5 +4,6 @@
 <%@include file="Header.jsp" %>
 
 <h2>ContactUs Page</h2>
-</body>
-</html>
+
+
+<%@include file="Footer.jsp" %>

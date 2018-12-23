@@ -55,8 +55,8 @@
 		<td>${category.categoryName}</td>
 		<td>${category.categoryDesc}</td>
 		<td>
-			<a href="<c:url  value='/editcategory/${category.categoryId}'/>" class="btn btn-warning" role="button">Edit</a>&nbsp
-			<a href="<c:url  value='/deletecategory/${category.categoryId}'/>" class="btn btn-danger" role="button">Delete</a>
+			<a href="<c:url  value='/editcategory/${category.categoryId}'/>" class="btn btn-warning" role="button"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp
+			<a href="<c:url  value='/deletecategory/${category.categoryId}'/>" class="btn btn-danger" role="button"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 		</td>			
 	 </tr>
 	</c:forEach>
@@ -64,23 +64,4 @@
   </table>
 </div>
 
-<%-- <table border="2" align="center">
-	<tr bgcolor="pink">
-		<td>Category ID</td>
-		<td>Category Description</td>
-		<td>Category Name</td>
-		<td>Operations</td>
-	</tr>
-	<c:forEach items="${categorylist}" var="category">
-	<tr>
-		<td>${category.categoryId}</td>
-		<td>${category.categoryName}</td>
-		<td>${category.categoryDesc}</td>
-		<td><a href="<c:url  value='/deletecategory/${category.categoryId}'/>">Delete</a>&nbsp|
-			<a href="<c:url  value='/editcategory/${category.categoryId}'/>">Edit</a></td>			
-	</tr>
-	</c:forEach>
-</table> --%>
-
-</body>
-</html>
+<%@include file="Footer.jsp" %>

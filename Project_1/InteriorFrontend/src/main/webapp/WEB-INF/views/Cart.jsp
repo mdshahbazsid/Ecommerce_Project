@@ -31,8 +31,8 @@
 		<td><input type="text" name="quantity" value="${cartItem.quantity}"></td>
 		<td>Rs ${cartItem.quantity*cartItem.price}/-</td>
 		<td>
-			<input type="submit" class="btn btn-warning" value="Update">&nbsp
-			<a href="<c:url value='/deletecartitem/${cartItem.cartItemId}'/>" class="btn btn-danger" role="button">Delete</a>
+			<input type="submit" class="btn btn-warning" value="Edit">&nbsp
+			<a href="<c:url value='/deletecartitem/${cartItem.cartItemId}'/>" class="btn btn-danger" role="button"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 		</td>
 		</tr>
 	</form>
@@ -49,5 +49,5 @@
 	</tbody>
 </table>
 </div>
-</body>
-</html>
+
+<%@include file="Footer.jsp" %>

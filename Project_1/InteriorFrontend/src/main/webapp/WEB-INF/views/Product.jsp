@@ -5,48 +5,6 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
-<%-- <form:form action="addproduct" modelAttribute="product" method="post" enctype="multipart/form-data">
-<table>
-	<tr>
-		<td>Product Name</td>
-		<td><form:input path="productName"/></td>
-	</tr>
-	<tr>
-		<td>Product Description</td>
-		<td><form:input path="productDesc"/></td>
-	</tr>
-	<tr>
-	<tr>
-		<td>Price</td>
-		<td><form:input path="price"/></td>
-	</tr>
-	<tr>
-		<td>Stock</td>
-		<td><form:input path="stock"/></td>
-	</tr>
-	<tr>
-		<td>Category</td>
-		<td><form:select path="categoryId">
-				<form:option value="0" label="--Select Category--"/>
-				<form:options items="${categoryList}"/>
-			</form:select></td>	
-	</tr>
-		<tr>
-		<td>Supplier</td>
-		<td><form:select path="supplierId">
-				<form:option value="0" label="--Select Supplier--"/>
-				<form:options items="${supplierList}"/>
-			</form:select></td>	
-	</tr>
-	<tr>
-		<td>Product Image</td>
-		<td><form:input type="file" path="pImage"/></td>
-	</tr>
-	<tr>
-		<td align="center"><input type="submit" value="Add Product"></td>
-	</tr>
-</table>
-</form:form> --%>
 
 <div class="container">
 <h2>Manage Product</h2>
@@ -117,8 +75,8 @@
 		<td>${product.categoryId}</td>
 		<td>${product.supplierId}</td>
 		<td>
-			<a href='<c:url value="/editproduct/${product.productId}"/>' class="btn btn-warning" role="button">Edit</a>&nbsp
-			<a href='<c:url value="/deleteproduct/${product.productId}"/>' class="btn btn-danger" role="button">Delete</a>
+			<a href='<c:url value="/editproduct/${product.productId}"/>' class="btn btn-warning" role="button"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp
+			<a href='<c:url value="/deleteproduct/${product.productId}"/>' class="btn btn-danger" role="button"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 		</td>			
 	 </tr>
 	</c:forEach>
@@ -126,33 +84,4 @@
   </table>
 </div>
 
-<%-- <table align="center" border="2">
-	<tr bgcolor="pink">
-		<td>Product Id</td>
-		<td>Product Name</td>
-		<td>Product Description</td>
-		<td>Price</td>
-		<td>Stock</td>
-		<td>Category ID</td>
-		<td>Supplier ID</td>
-		<td>Operations</td>
-	</tr>
-	<c:forEach items="${productlist}" var="product">
-	<tr>
-		<td>${product.productId}</td>
-		<td>${product.productName}</td>
-		<td>${product.productDesc}</td>
-		<td>${product.price}</td>
-		<td>${product.stock}</td>
-		<td>${product.categoryId}</td>
-		<td>${product.supplierId}</td>
-		<td>
-			<a href='<c:url value="/editproduct/${product.productId}"/>'>Edit</a>&nbsp|
-			<a href='<c:url value="/deleteproduct/${product.productId}"/>'>Delete</a>
-		</td>
-	</tr>
-	</c:forEach>
-</table> --%>
-
-</body>
-</html>
+<%@include file="Footer.jsp" %>

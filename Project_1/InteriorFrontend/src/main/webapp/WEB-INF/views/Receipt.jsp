@@ -1,46 +1,92 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@include file="Header.jsp" %>
-<div class="container">
-<table class="table table-bordered" align="center" border="1">
-	<tr>
-		<td colspan="6">Receipt</td>
-	</tr>
-	<tr>
-		<td colspan="2">Order Id</td>
-		<td>${orderDetail.orderId }</td>
-		<td colspan="2">Order Date</td>
-		<td>${orderDetail.orderDate}</td>
-	</tr>
 
-	<tr bgcolor="pink">
-		<td>Serial No.</td>
-		<td>Product Name</td>
-		<td>Price</td>
-		<td>Quantity</td>
-		<td>Total Price</td>
-		<td>Edit</td>
-	</tr>
-	<c:if test="${not empty cartitems}">
-	<c:forEach items="${cartitems}" var="cartItem">
-	<tr>
-		<td></td>
-		<td>${cartItem.productName}</td>
-		<td>${cartItem.price}</td>
-		<td><input type="text" name="quantity" value="${cartItem.quantity}"></td>
-		<td>${cartItem.quantity*cartItem.price}</td>
-	</tr>
-	</c:forEach>
-	</c:if>
-	<tr bgcolor="orange">
-		<td colspan="4">Total Purchase Amount</td>
-		<td colspan="2">Rs ${totalCartAmount}/-</td>
-	</tr>
-	
-	<tr bgcolor="cyan">
-		<td colspan="6" align="6">Thanks For Shopping</td>
-	</tr>
-</table>
+<center>
+<div class="container">
+    <div class="row">
+        <div class="container col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <address>
+                        <strong>NovaDesigns.com</strong>
+                        <br>
+                        P.O. Box 2012
+                        <br>
+                        Detroit, Mi 48000
+                        <br>
+                        <br> P :<br> (213) 484-6829
+                    </address>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                    <p>
+                        <em>Date : ${orderDetail.orderDate}</em>
+                    </p>
+                    <p>
+                        <em>Order Id : ${orderDetail.orderId }</em>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-center">
+        
+                    <h3 align="center">Receipt</h3>
+                </div>
+                </span>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach items="${cartitems}" var="cartItem">
+                        <tr>
+                            <td class="col-md-9"><em>${cartItem.productName}</em></h4></td>
+                            <td class="col-md-1" style="text-align: center">${cartItem.quantity}</td>
+                            <td class="col-md-1 text-center">Rs ${cartItem.price}/-</td>
+                            <td class="col-md-1 text-center">Rs ${cartItem.quantity*cartItem.price}/-</td>
+                        </tr>
+                        </c:forEach>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td class="text-right">
+                            <p>
+                                <strong>Subtotal: </strong>
+                            </p>
+                            <p>
+                                <strong>Tax(8%): </strong>
+                            </p></td>
+                            <td class="text-center">
+                            <p>
+                                <strong>Rs ${totalCartAmount}/-</strong>
+                            </p>
+                            <p>
+                                <strong>Rs ${totalCartAmount*(0.08)}/-</strong>
+                            </p></td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td class="text-right"><strong>Total: </strong></td>
+                            <td class="text-center text-danger"><strong>Rs ${totalCartAmount+totalCartAmount*(0.08)}/-</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <h1 style="text-align:center;">
+                        Thank you for your order !!...
+                    </h1>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-</body>
-</html>
+</center>
+
+<%@include file="Footer.jsp" %>

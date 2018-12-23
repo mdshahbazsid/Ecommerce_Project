@@ -37,12 +37,12 @@
     <input type="radio" class="form-check-input" name="role" value="ADMIN">Admin
   </label>
 </div> 
+</br>
 <div class="container">
-<button type="submit" class="btn btn-outline-primary">Register</button>
+<button type="submit" class="btn btn-outline-primary btn-block">Register</button>
 </div>  
     
   </form>
 </div>
-
-</body>
-</html>
+</br>
+<%@include file="Footer.jsp" %>

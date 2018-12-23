@@ -6,18 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap css file -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link  rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   
+  <link  rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
-<div class="container" style="background-color:Orange;">
-  <h1>OneTech.com</h1>
-  <p>-Largest Mobile OnlineStore</p> 
+<div class="row">
+  <div class="col" style="background-color:SlateBlue;">
+  	<h1 class="display-4 p-3" style="color:white;">NovaDesigns.com</h1>
+  	<p class="p-3" style="color:white;">-Best Architecture Designs</p>
+  </div>
 </div>
 
-<div class="container">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="row">
+	<div class="col">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -72,7 +75,6 @@
   </div>
 </nav>
 </div>
-
 <br>
 <c:if test="${sessionScope.loggedIn}">
 <div class="container">
@@ -81,6 +83,11 @@
 	</div>
 </div>
 </c:if>
+</div>
+
+
+
+
 
   <!-- JQuery file --> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -90,24 +97,3 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 
-<%-- <p align="center">
-	<a href="home">Home</a>&nbsp&nbsp|
-	<c:if test="${!sessionScope.loggedIn}">
-	<a href="login">Login</a>&nbsp&nbsp|
-	<a href="register">Register</a>&nbsp&nbsp|
-	<a href="aboutus">AboutUs</a>&nbsp&nbsp|
-	<a href="contactus">ContactUs</a>&nbsp&nbsp|
-	</c:if>
-	<c:if test="${sessionScope.loggedIn}">
-		<c:if test="${sessionScope.role=='ADMIN'}">
-		<a href="category">Category</a>&nbsp&nbsp|
-		<a href="product">Manage Product</a>&nbsp&nbsp|
-		</c:if>
-		<c:if test="${sessionScope.role=='USER'}">
-		<a href="productdisplay">Display Product</a>
-		</c:if>
-	</c:if>
-</p>
-<c:if test="${sessionScope.loggedIn}">
-<p><h3>Welcome ${username}&nbsp|<a href="/logout">Logout</a></h3></p>
-</c:if> --%>
