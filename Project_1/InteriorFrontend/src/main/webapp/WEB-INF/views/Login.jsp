@@ -6,16 +6,11 @@
   <form action="perform_login" method="post">
     <div class="form-group">
       <label for="username">UserName :</label>
-      <input type="text" class="form-control" placeholder="Enter UserName" name="username">
+      <input type="text" class="form-control" placeholder="Enter UserName" name="username" required="required" >
     </div>
     <div class="form-group">
       <label for="pwd">Password :</label>
-      <input type="password" class="form-control" placeholder="Enter password" name="password">
-    </div>
-    <div class="form-group form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" name="remember"> Remember me
-      </label>
+      <input type="password" class="form-control" placeholder="Enter password" name="password" required="required">
     </div>
     <button type="submit" class="btn btn-primary">Login</button>
   </form>

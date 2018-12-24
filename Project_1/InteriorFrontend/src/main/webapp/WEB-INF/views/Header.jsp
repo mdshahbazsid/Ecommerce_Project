@@ -75,7 +75,7 @@
   </div>
 </nav>
 </div>
-<br>
+</br>
 <c:if test="${sessionScope.loggedIn}">
 <div class="container">
 	<div class="d-flex justify-content-end">

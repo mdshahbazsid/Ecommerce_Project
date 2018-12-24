@@ -13,19 +13,19 @@
     </div>
     <div class="form-group">
       <label for="text">Username :</label>
-      <input type="text" class="form-control" placeholder="Enter Username" name="userName">
+      <input type="text" class="form-control" placeholder="Enter Username" name="userName" required="required">
     </div>
     <div class="form-group">
       <label for="text">New Password :</label>
-      <input type="password" class="form-control" placeholder="Enter Password" name="password">
+      <input type="password" class="form-control" placeholder="Enter Password" name="password" required="required">
     </div>
     <div class="form-group">
   <label >Address :</label>
-  <textarea class="form-control" rows="5" name="address"></textarea>
+  <textarea class="form-control" rows="5" name="address" required="required"></textarea>
 </div>
     <div class="form-group">
       <label >Mobile No (+91) :</label>
-      <input type="number" maxlength="10" class="form-control" placeholder="Enter Mobile no." name="mobileNo">
+      <input type="number" maxlength="10" class="form-control" placeholder="Enter Mobile no." name="mobileNo" required="required">
     </div>
     <div class="form-check-inline">
   	<label class="form-check-label">Role :&nbsp
