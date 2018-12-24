@@ -3,9 +3,9 @@
 <%@include file="Header.jsp" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 
-
+<div class="container">
 <form action="<c:url value="/updatecategory"/>" method="post">
-	<table>
+	<table class="table">
 		<tr>
 			<td>Category ID</td>
 			<td><input type="text" name="cid" value="${categoryData.categoryId}" readonly></td>
@@ -17,9 +17,9 @@
 			<td><input type="text" name="cdesc" value="${categoryData.categoryDesc}"></td>
 		</tr>
 		<tr>
-			<td align="center"><input type="submit" value="update"></td>
+			<td align="center"><input type="submit" class="btn btn-outline-primary" value="update"></td>
 		</tr>
 	</table>	
 </form>
-
+</div>
 <%@include file="Footer.jsp" %>

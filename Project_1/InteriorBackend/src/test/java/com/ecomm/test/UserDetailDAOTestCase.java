@@ -27,7 +27,7 @@ static UserDetailDAO userdetailDAO;
 		userdetailDAO = (UserDetailDAO)context.getBean("userdetailDAO");
 	}
 
-	//@Ignore
+	@Ignore
 	@Test
 	public void addUserTest() {
 		
@@ -91,4 +91,19 @@ static UserDetailDAO userdetailDAO;
 		}
 	}
 
+/*	@Ignore
+	@Test
+	public void listUsers() {
+		
+		List<UserDetail> listUsers = userdetailDAO.listUsers();
+		
+		for(UserDetail user : listUsers) {
+			if (user.getUserName().equals("zishan")) 
+			{
+				if() {
+					
+				}
+			}
+		}*/
+		
 }

@@ -56,7 +56,7 @@ public class CartController {
 		m.addAttribute("cartitems",listCartItems);
 		m.addAttribute("totalCartAmount",this.calTotalCartAmount(listCartItems));
 		
-		return "Cart";
+		return "redirect:/cart";
 	}
 	
 	@RequestMapping(value="/updatecartitem/{cartItemId}")

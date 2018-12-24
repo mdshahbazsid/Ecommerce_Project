@@ -11,10 +11,10 @@
 </head>
 <body>
 
-<div class="row">
+<div class="row" style="border-color:red;">
   <div class="col" style="background-color:SlateBlue;">
-  	<h1 class="display-4 p-3" style="color:white;">NovaDesigns.com</h1>
-  	<p class="p-3" style="color:white;">-Best Architecture Designs</p>
+  	<h1 class="display-4 p-2" style="color:white;">NovaDesigns.com</h1>
+  	<p class="p-2" style="color:white;">-Best Architecture Designs</p>
   </div>
 </div>
 
@@ -29,12 +29,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="<c:url value="/"/>">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<c:url value="/"/>">Home&nbsp<span class="sr-only">(current)</span></a>
       </li>
       <c:if test="${!sessionScope.loggedIn}">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          My Account
+         <i class="fa fa-user" style="font-size:24px;" aria-hidden="true"></i>&nbsp
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="login">Login</a>
@@ -75,18 +75,17 @@
   </div>
 </nav>
 </div>
+</div>
 </br>
 <c:if test="${sessionScope.loggedIn}">
-<div class="container">
-	<div class="d-flex justify-content-end">
-		<h5>Welcome : ${username}&nbsp|&nbsp<a href="${page.ConText.request.context.Path}/InteriorFrontend/perform_logout" class="btn btn-danger" role="button">Logout</a></h5>
+<div class="row">
+	<div class="col">
+		<div class="d-flex justify-content-end">
+			<h5>Welcome :<f style="color:MediumSeaGreen;"> ${username}&nbsp|&nbsp</f><a href="${page.ConText.request.context.Path}/InteriorFrontend/perform_logout" class="btn btn-danger" role="button">Logout</a></h5>
+		</div>
 	</div>
 </div>
 </c:if>
-</div>
-
-
-
 
 
   <!-- JQuery file --> 

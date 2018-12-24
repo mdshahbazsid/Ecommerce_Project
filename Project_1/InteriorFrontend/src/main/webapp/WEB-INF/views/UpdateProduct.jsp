@@ -4,9 +4,9 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-
+<div class="container">
 <form:form action="/InteriorFrontend/updateproduct" modelAttribute="product" method="post" enctype="multipart/form-data">
-<table>
+<table class="table">
     <tr>
 		<td>Product ID</td>
 		<td><form:input path="productId" readonly="true"/></td>
@@ -47,9 +47,9 @@
 		<td><form:input type="file" path="pImage"/></td>
 	</tr>
 	<tr>
-		<td align="center"><input type="submit" value="Update Product"></td>
+		<td align="center"><input type="submit" class="btn btn-outline-primary" value="Update Product"></td>
 	</tr>
 </table>
 </form:form>
-
+</div>
 <%@include file="Footer.jsp" %>
