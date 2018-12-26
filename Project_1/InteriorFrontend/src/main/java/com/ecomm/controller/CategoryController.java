@@ -53,7 +53,7 @@ public class CategoryController {
 		List<Category> listcategories = categoryDAO.listCategories();
 		m.addAttribute("categorylist",listcategories);
 		
-		return "Category";
+		return "redirect:/category";
 	}
 	
 	@RequestMapping(value="/editcategory/{categoryId}")

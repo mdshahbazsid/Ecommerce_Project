@@ -20,7 +20,7 @@
       <input type="password" class="form-control" placeholder="Enter Password" name="password" required="required">
     </div>
     <div class="form-group">
-  <label >Address :</label>
+  <label >Shipping Address :</label>
   <textarea class="form-control" rows="5" name="address" required="required"></textarea>
 </div>
     <div class="form-group">

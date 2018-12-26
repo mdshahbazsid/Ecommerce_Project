@@ -180,7 +180,7 @@ public class ProductController {
 		m.addAttribute("categoryList",this.getCategoryList(categoryDAO.listCategories()));
 		m.addAttribute("supplierList",this.getSupplierList(supplierDAO.listSuppliers()));
 		
-		return "Product";
+		return "redirect:/product";
 	}
 	
 	@RequestMapping(value="/productdisplay")

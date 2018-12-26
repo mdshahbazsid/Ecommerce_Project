@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ecomm.dao.CartItemDAO;
 import com.ecomm.dao.OrderDetailDAO;
+import com.ecomm.dao.UserDetailDAO;
 import com.ecomm.model.CartItem;
 import com.ecomm.model.OrderDetail;
+import com.ecomm.model.UserDetail;
 
 @Controller
 public class OrderController {
@@ -25,6 +27,9 @@ public class OrderController {
 	
 	@Autowired
 	OrderDetailDAO orderDetailDAO;
+	
+	@Autowired
+	UserDetailDAO userdetailDAO;
 	
 	@RequestMapping(value="/checkout")
 	public String checkOutProcess(HttpSession session,Model m) {
@@ -68,7 +73,8 @@ public class OrderController {
 		
 		orderDetailDAO.insertOrderDetail(orderDetail);
 		orderDetailDAO.updateOrderDetail(userName);
-		
+		UserDetail userdetail = userdetailDAO.getUserDetail(userName);
+		m.addAttribute("userdetail",userdetail);
 		return "Receipt";
 	}
 	

@@ -28,13 +28,10 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="<c:url value="/"/>">Home&nbsp<span class="sr-only">(current)</span></a>
-      </li>
       <c:if test="${!sessionScope.loggedIn}">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fa fa-user" style="font-size:24px;" aria-hidden="true"></i>&nbsp
+         <i class="fa fa-user" style="font-size:24px;" aria-hidden="true"></i>&nbsp;
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="login">Login</a>
@@ -43,6 +40,9 @@
         </div>
       </li>
       </c:if>
+       <li class="nav-item active">
+        <a class="nav-link" href="<c:url value="/"/>">Home&nbsp;<span class="sr-only">(current)</span></a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="aboutus">About Us</a>
       </li>
@@ -51,11 +51,17 @@
       </li>
       <c:if test="${sessionScope.loggedIn}">
       <c:if test="${sessionScope.role=='ADMIN'}">
-      <li class="nav-item">
-        <a class="nav-link" href="category">Manage Category</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="product">Manage Products</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Pages
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="category">Manage Category</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="product">Manage Products</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="supplier">Manage Supplier</a>
+        </div>
       </li>
       </c:if>
       <c:if test="${sessionScope.role=='USER'}">
@@ -86,7 +92,6 @@
 	</div>
 </div>
 </c:if>
-
 
   <!-- JQuery file --> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

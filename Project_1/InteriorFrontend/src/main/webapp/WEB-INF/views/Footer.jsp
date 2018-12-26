@@ -2,7 +2,24 @@
 </br>
  <div class="row">
  	<div class="col" style="background-color:SlateBlue;">
-        <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot;<a href="/">HOME</a></p>   
+        <div class="container"><h5 style="color:white;" align="center">&copy; 2017-2018 Company, Inc.</h5></div>
+        <ul class="nav justify-content-center">
+    		<li class="nav-item">
+      			<a class="nav-link" style="color:white;" href="contactus">&middot;&nbsp;Contact Us</a>
+    		</li>
+    		<li class="nav-item">
+      			<a class="nav-link" style="color:white;" href="#">&middot;&nbsp;Privacy</a>
+    		</li>
+    		<li class="nav-item">
+      			<a class="nav-link" style="color:white;" href="#">&middot;&nbsp;Terms</a>
+    		</li>
+    		<li class="nav-item">
+      			<a class="nav-link" style="color:white;" href="aboutus">&middot;&nbsp;About Us</a>
+    		</li>
+    		<li class="nav-item">
+      			<a class="nav-link" style="color:white;" href="<c:url value="/"/>">&middot;&nbsp;Home</a>
+    		</li>
+  		</ul> 
  	</div>
  </div>   
 </body>

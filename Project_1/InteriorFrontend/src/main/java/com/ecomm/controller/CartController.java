@@ -72,7 +72,7 @@ public class CartController {
 		m.addAttribute("cartitems",listCartItems);
 		m.addAttribute("totalCartAmount",this.calTotalCartAmount(listCartItems));
 		
-		return "Cart";
+		return "redirect:/cart";
 	}
 	
 	@RequestMapping(value="/deletecartitem/{cartItemId}")
@@ -88,7 +88,7 @@ public class CartController {
 		m.addAttribute("cartitems",listCartItems);
 		m.addAttribute("totalCartAmount",this.calTotalCartAmount(listCartItems));
 		
-		return "Cart";
+		return "redirect:/cart";
 	}
 	
 	@RequestMapping(value="/continueshopping")

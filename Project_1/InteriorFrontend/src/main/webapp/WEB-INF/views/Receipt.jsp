@@ -5,7 +5,7 @@
 <center>
 <div class="container">
     <div class="row">
-        <div class="container col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+        <div class="container col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3 bg-light">
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <address>
@@ -24,6 +24,15 @@
                     </p>
                     <p>
                         <em>Order Id : ${orderDetail.orderId }</em>
+                    </p>
+                    <p>
+                        <em>User Name : ${userdetail.userName}</em>
+                    </p>
+                    <p>
+                        <em>Shipping Address : ${userdetail.address}</em>
+                    </p>
+                    <p>
+                        <em>Contact No. : ${userdetail.mobileNo}</em>
                     </p>
                 </div>
             </div>
@@ -78,7 +87,7 @@
                     </tbody>
                 </table>
                 <div>
-                    <h1 style="text-align:center;">
+                    <h1 class="dispaly-4" style="text-align:center;">
                         Thank you for your order !!...
                     </h1>
                     
