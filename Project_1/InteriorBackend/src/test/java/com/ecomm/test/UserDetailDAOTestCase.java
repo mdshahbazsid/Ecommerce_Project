@@ -72,7 +72,7 @@ static UserDetailDAO userdetailDAO;
 	
 	@Ignore
 	@Test
-	public void listCategoriesTest() {
+	public void listUsersTest() {
 		
 		List<UserDetail> listUsers = userdetailDAO.listUsers();
 		
@@ -91,19 +91,20 @@ static UserDetailDAO userdetailDAO;
 		}
 	}
 
-/*	@Ignore
+	/*@Ignore
 	@Test
-	public void listUsers() {
+	public void checkingUsers() {
 		
 		List<UserDetail> listUsers = userdetailDAO.listUsers();
-		
+		UserDetail userdetail = new UserDetail();
+		userdetail = userdetailDAO.getUserDetail("shahbaz");
 		for(UserDetail user : listUsers) {
-			if (user.getUserName().equals("zishan")) 
-			{
-				if() {
-					
-				}
+			if(user.getUserName().equals("shahbaz")) {
+				System.out.println("User Exist");
 			}
-		}*/
-		
+			else {
+				System.out.println("User DoesNot Exist");
+			}
+		}
+	}*/	
 }
