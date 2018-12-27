@@ -25,7 +25,7 @@
 </div>
     <div class="form-group">
       <label >Mobile No (+91) :</label>
-      <input type="number" maxlength="10" class="form-control" placeholder="Enter Mobile no." name="mobileNo" required="required">
+      <input type="number" class="form-control" placeholder="Enter Mobile no." name="mobileNo" required="required" maxlength="10">
     </div>
     <div class="form-check-inline">
   	<label class="form-check-label">Role :&nbsp

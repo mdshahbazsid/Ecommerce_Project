@@ -12,7 +12,7 @@
 <body>
 
 <div class="row" style="border-color:red;">
-  <div class="col" style="background-color:SlateBlue;">
+  <div class="col" style="background-color:Orange;">
   	<h1 class="display-4 p-2" style="color:white;">NovaDesigns.com</h1>
   	<p class="p-2" style="color:white;">-Best Architecture Designs</p>
   </div>

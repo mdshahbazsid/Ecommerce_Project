@@ -5,12 +5,12 @@
 <%@include file="Header.jsp" %>
 
 <div class="container">
-<h3 class="text-muted">Deals of the Day</h3>
+<h1 class="text-muted display-4">Deals of the Day</h1>
 </br>
 <c:forEach items="${productlist}" var="product">
 <div class="container">
-<div class="card float-left" style="width:270px">
-    <center><img class="card-img-top" src="<c:url value="/resources/images/${product.productId}.jpg"/>" alt="Image" style="width:240px;height:270px"></center>
+<div class="card float-left" style="width:180px">
+    <center><img class="card-img-top" src="<c:url value="/resources/images/${product.productId}.jpg"/>" alt="Image" style="width:170px;height:150px"></center>
     <div class="card-body">
       <h5 class="card-title">${product.productName}</h5>
       <p class="card-text">Price : Rs ${product.price}/-</p>

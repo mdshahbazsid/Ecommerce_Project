@@ -13,7 +13,7 @@
     </div>
     <div class="form-group">
       <label for="text">Supplier Address :</label>
-      <input type="text" class="form-control" placeholder="Enter Category Address" name="sadd">
+      <input type="text" class="form-control" placeholder="Enter Supplier Address" name="sadd">
     </div>
     <button type="submit" class="btn btn-outline-primary">Add Supplier</button>
   </form>
