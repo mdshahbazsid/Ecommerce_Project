@@ -1,5 +1,6 @@
 package com.ecomm.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.ecomm.model.UserDetail;
@@ -12,4 +13,6 @@ public interface UserDetailDAO {
 	
 	public List<UserDetail> listUsers();
 	public UserDetail getUserDetail(String userName);
+	
+	public boolean userNames(String userName);
 }

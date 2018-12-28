@@ -2,6 +2,7 @@ package com.ecomm.test;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.BeforeClass;
@@ -32,13 +33,13 @@ static UserDetailDAO userdetailDAO;
 	public void addUserTest() {
 		
 		UserDetail userdetail = new UserDetail();
-		userdetail.setUserName("vivek");
+		userdetail.setUserName("sam");
 		userdetail.setPassword("pass@12345");
 		userdetail.setEnabled(true);
 		userdetail.setRole("USER");
 		//userdetail.setCustomerName("Vivek Kumar");
-		userdetail.setEmailId("vivekkumar@gmail.com");
-		userdetail.setMobileNo("8768555555");
+		userdetail.setEmailId("sam@gmail.com");
+		userdetail.setMobileNo("9119191919");
 		userdetail.setAddress("Noida,Delhi");
 		
 		assertTrue("Problem in adding User",userdetailDAO.addUserDetail(userdetail));
@@ -90,21 +91,34 @@ static UserDetailDAO userdetailDAO;
 			
 		}
 	}
-
-	/*@Ignore
+	@Ignore
 	@Test
 	public void checkingUsers() {
 		
-		List<UserDetail> listUsers = userdetailDAO.listUsers();
-		UserDetail userdetail = new UserDetail();
-		userdetail = userdetailDAO.getUserDetail("shahbaz");
-		for(UserDetail user : listUsers) {
-			if(user.getUserName().equals("shahbaz")) {
+		if(userdetailDAO.userNames("hhh")) 
+			System.out.println("Exist");
+		
+		else 
+			System.out.println("Not Exist");
+		
+		
+		/*List<UserDetail> listUsers = userdetailDAO.listUsers();
+		
+		assertTrue("Problem in Fetching The UserName",listUsers.size()>0);
+		
+		ArrayList userNames = new ArrayList();
+			for(UserDetail user : listUsers)
+			{
+				userNames.add(user.getUserName());
+			}
+			
+			if(userNames.contains("o"))
+			{
 				System.out.println("User Exist");
 			}
-			else {
-				System.out.println("User DoesNot Exist");
-			}
-		}
-	}*/	
+			else 
+			{
+				System.out.println("User Not Exist");
+			}*/
+	}	
 }

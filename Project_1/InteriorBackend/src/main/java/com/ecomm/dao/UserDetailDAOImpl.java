@@ -1,5 +1,6 @@
 package com.ecomm.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -64,7 +65,7 @@ public class UserDetailDAOImpl implements UserDetailDAO {
 		try
 		{
 			Session session = sessionFactory.openSession();
-			Query query = session.createQuery("from User");
+			Query query = session.createQuery("from UserDetail");
 			List<UserDetail> listUsers = query.list();
 			session.close();
 			return listUsers;
@@ -88,6 +89,35 @@ public class UserDetailDAOImpl implements UserDetailDAO {
 		catch (Exception e) 
 		{
 			return null;
+		}
+	}
+
+	@Override
+	public boolean userNames(String userName) {
+		try
+		{
+			Session session = sessionFactory.openSession();
+			Query query = session.createQuery("from UserDetail");
+			List<UserDetail> listUsers = query.list();
+			session.close();
+			ArrayList userNames = new ArrayList();
+			for(UserDetail user : listUsers)
+			{
+				userNames.add(user.getUserName());
+			}
+			
+			if(userNames.contains(userName))
+			{
+				return true;
+			}
+			else 
+			{
+				return false;
+			}
+		}
+		catch (Exception e) 
+		{
+			return false;
 		}
 	}
 
