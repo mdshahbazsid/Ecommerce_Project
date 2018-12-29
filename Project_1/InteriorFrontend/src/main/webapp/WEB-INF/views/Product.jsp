@@ -55,6 +55,7 @@
     <thead class="thead-light">
       <tr>
         <th>Product ID</th>
+        <th>Product Image</th>
         <th>Product Name</th>
         <th>Product Description</th>
         <th>Price</th>
@@ -68,14 +69,15 @@
     <c:forEach items="${productlist}" var="product">
       <tr>
 		<td>${product.productId}</td>
-		<td>${product.productName}</td>
+		<td><img src="<c:url value="/resources/images/${product.productId}.jpg"/>" alt="Image" style="width:100px;height:100px"></td>
+		<td><h5>${product.productName}</h5></td>
 		<td>${product.productDesc}</td>
 		<td>Rs ${product.price}/-</td>
 		<td>${product.stock}</td>
 		<td>${product.categoryId}</td>
 		<td>${product.supplierId}</td>
 		<td>
-			<a href='<c:url value="/editproduct/${product.productId}"/>' class="btn btn-warning" role="button"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp
+			<a href='<c:url value="/editproduct/${product.productId}"/>' class="btn btn-warning" role="button"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 			<a href='<c:url value="/deleteproduct/${product.productId}"/>' class="btn btn-danger" role="button"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 		</td>			
 	 </tr>

@@ -37,7 +37,7 @@
 		<td>${supplier.supplierName}</td>
 		<td>${supplier.supplierAddress}</td>
 		<td>
-			<a href="<c:url  value='/editsupplier/${supplier.supplierId}'/>" class="btn btn-warning" role="button"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp
+			<a href="<c:url  value='/editsupplier/${supplier.supplierId}'/>" class="btn btn-warning" role="button"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 			<a href="<c:url  value='/deletesupplier/${supplier.supplierId}'/>" class="btn btn-danger" role="button"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 		</td>			
 	 </tr>

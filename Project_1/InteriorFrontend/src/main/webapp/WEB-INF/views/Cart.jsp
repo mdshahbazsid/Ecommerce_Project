@@ -7,7 +7,7 @@
 <table class="table table-bordered ">
 	<thead class="thead-light">
 	<tr>
-		<th>Serial No.</th>
+		<th>Product Image</th>
 		<th>Product Name</th>
 		<th>Price</th>
 		<th>Quantity</th>
@@ -25,7 +25,7 @@
 	<c:forEach items="${cartitems}" var="cartItem">
 	<form action='<c:url value="/updatecartitem/${cartItem.cartItemId}"/>'>
 	<tr>
-		<td>#</td>
+		<td><img src="<c:url value="/resources/images/${cartItem.productId}.jpg"/>" alt="Image" style="width:100px;height:100px"></td>
 		<td>${cartItem.productName}</td>
 		<td>Rs ${cartItem.price}/-</td>
 		<td><input type="text" name="quantity" value="${cartItem.quantity}"></td>

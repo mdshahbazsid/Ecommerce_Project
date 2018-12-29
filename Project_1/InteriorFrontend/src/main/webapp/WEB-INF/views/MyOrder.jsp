@@ -7,7 +7,7 @@
 <table class="table table-bordered ">
 	<thead class="thead-light">
 	<tr>
-		<th>Serial No.</th>
+		<th>Product Image</th>
 		<th>Product Name</th>
 		<th>Price</th>
 		<th>Quantity</th>
@@ -23,7 +23,7 @@
 	<c:if test="${not empty cartitems}">
 	<c:forEach items="${cartitems}" var="cartItem">
 	<tr>
-	    <td>#</td>
+	    <td><img src="<c:url value="/resources/images/${cartItem.productId}.jpg"/>" alt="Image" style="width:100px;height:100px"></td>
 		<td>${cartItem.productName}</td>
 		<td>Rs ${cartItem.price}/-</td>
 		<td>${cartItem.quantity}</td>

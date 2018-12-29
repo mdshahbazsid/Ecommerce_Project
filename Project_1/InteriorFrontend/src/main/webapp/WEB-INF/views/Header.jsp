@@ -82,12 +82,13 @@
 </nav>
 </div>
 </div>
-</br>
 <c:if test="${sessionScope.loggedIn}">
 <div class="row">
 	<div class="col">
-		<div class="d-flex justify-content-end">
-			<h5>Welcome :<f style="color:MediumSeaGreen;"> ${username}&nbsp|&nbsp</f><a href="${page.ConText.request.context.Path}/InteriorFrontend/perform_logout" class="btn btn-danger" role="button">Logout</a></h5>
+		<div class="container">
+			<div class="d-flex justify-content-end">
+			<h5>Hi!<f style="color:Blue;"> ${username}&nbsp;|&nbsp;</f><a href="${page.ConText.request.context.Path}/InteriorFrontend/perform_logout" class="btn btn-danger" role="button">Logout</a></h5>
+		    </div>
 		</div>
 	</div>
 </div>

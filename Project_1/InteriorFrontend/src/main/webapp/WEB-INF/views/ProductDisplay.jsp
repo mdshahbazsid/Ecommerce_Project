@@ -10,7 +10,7 @@
 <c:forEach items="${productlist}" var="product">
 <div class="container">
 <div class="card float-left" style="width:180px">
-    <center><img class="card-img-top" src="<c:url value="/resources/images/${product.productId}.jpg"/>" alt="Image" style="width:170px;height:150px"></center>
+    <center><img class="card-img-top" src="<c:url value="/resources/images/${product.productId}.jpg"/>" alt="Image" style="width:170px;height:190px"></center>
     <div class="card-body">
       <h5 class="card-title">${product.productName}</h5>
       <p class="card-text">Price : Rs ${product.price}/-</p>

@@ -55,7 +55,7 @@
 		<td>${category.categoryName}</td>
 		<td>${category.categoryDesc}</td>
 		<td>
-			<a href="<c:url  value='/editcategory/${category.categoryId}'/>" class="btn btn-warning" role="button"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp
+			<a href="<c:url  value='/editcategory/${category.categoryId}'/>" class="btn btn-warning" role="button"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 			<a href="<c:url  value='/deletecategory/${category.categoryId}'/>" class="btn btn-danger" role="button"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 		</td>			
 	 </tr>
