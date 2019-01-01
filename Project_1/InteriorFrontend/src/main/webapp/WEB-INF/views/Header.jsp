@@ -13,8 +13,8 @@
 
 <div class="row" style="border-color:red;">
   <div class="col" style="background-color:Orange;">
-  	<h1 class="display-4 p-2" style="color:white;">NovaDesigns.com</h1>
-  	<p class="p-2" style="color:white;">-Best Architecture Designs</p>
+  	<h1 class="display-4 p-2" >NovaDesigns.com</h1>
+  	<p class="p-2">-Best Architecture Designs</p>
   </div>
 </div>
 
@@ -28,10 +28,13 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+    	<li class="nav-item active">
+        <a class="nav-link" href="<c:url value="/"/>">Home&nbsp;<span class="sr-only">(current)</span></a>
+        </li>
       <c:if test="${!sessionScope.loggedIn}">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fa fa-user" style="font-size:24px;" aria-hidden="true"></i>&nbsp;
+         Account&nbsp;
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="login">Login</a>
@@ -40,9 +43,7 @@
         </div>
       </li>
       </c:if>
-       <li class="nav-item active">
-        <a class="nav-link" href="<c:url value="/"/>">Home&nbsp;<span class="sr-only">(current)</span></a>
-      </li>
+       
       <li class="nav-item">
         <a class="nav-link" href="aboutus">About Us</a>
       </li>
@@ -69,7 +70,7 @@
         <a class="nav-link" href="productdisplay">Show Products</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="cart">Cart</a>
+        <a class="nav-link" href="cart">My Cart</a>
       </li>
       </c:if>
       </c:if>

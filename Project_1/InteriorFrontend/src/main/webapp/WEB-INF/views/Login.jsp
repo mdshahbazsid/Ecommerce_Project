@@ -2,8 +2,17 @@
 
 
 <div class="container">
-  <h2>Login Form</h2>
+  <h1 class="display-4">Login Form</h1>
+  </br>
+  <c:if test="${not empty error}">
+		<div class="error"><h6 style="color:red;">${error}</h6></div>
+  </c:if>
+  <c:if test="${not empty msg}">
+			<div class="msg"><h6 style="color:green;">${msg}</h6></div>
+  </c:if>
+  </br>
   <form action="perform_login" method="post">
+
     <div class="form-group">
       <label for="username">UserName :</label>
       <input type="text" class="form-control" placeholder="Enter UserName" name="username" required="required" >
