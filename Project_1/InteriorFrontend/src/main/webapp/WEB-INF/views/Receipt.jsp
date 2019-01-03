@@ -67,22 +67,18 @@
                             <p>
                                 <strong>Subtotal: </strong>
                             </p>
-                            <p>
-                                <strong>Tax(8%): </strong>
-                            </p></td>
+                            </td>
                             <td class="text-center">
                             <p>
                                 <strong>Rs ${totalCartAmount}/-</strong>
                             </p>
-                            <p>
-                                <strong>Rs ${totalCartAmount*(0.08)}/-</strong>
-                            </p></td>
+                            </td>
                         </tr>
                         <tr>
                             <td>   </td>
                             <td>   </td>
                             <td class="text-right"><strong>Total: </strong></td>
-                            <td class="text-center text-danger"><strong>Rs ${totalCartAmount+totalCartAmount*(0.08)}/-</strong></td>
+                            <td class="text-center text-danger"><strong>Rs ${totalCartAmount+totalCartAmount}/-</strong></td>
                         </tr>
                     </tbody>
                 </table>

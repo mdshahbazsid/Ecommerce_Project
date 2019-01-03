@@ -14,6 +14,9 @@
     <div class="form-group">
       <label for="text">Username :</label>
       <input type="text" class="form-control" placeholder="Enter Username" name="userName" required="required">
+      <c:if test="${error!=null}">
+      <span style="color:red">${error}</span>
+      </c:if>
     </div>
     <div class="form-group">
       <label for="text">New Password :</label>
@@ -28,15 +31,11 @@
       <input type="number" class="form-control" placeholder="Enter Mobile no." name="mobileNo" required="required" maxlength="10">
     </div>
     <div class="form-check-inline">
-  	<label class="form-check-label">Role :&nbsp
+  	<label class="form-check-label">Role :&nbsp;
     <input type="radio" class="form-check-input" name="role" value="USER" checked="checked">User
   	</label>
 	</div>
-	<div class="form-check-inline">
-  	<label class="form-check-label">
-    <input type="radio" class="form-check-input" name="role" value="ADMIN">Admin
-  </label>
-</div> 
+	
 </br>
 <div class="container">
 <button type="submit" class="btn btn-outline-primary btn-block">Register</button>

@@ -3,24 +3,6 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
 <%@include file="Header.jsp" %>
 
-
-<%-- <form action="<c:url value="/addcategory"/>" method="post">
-	<table>
-		<tr>
-			<td>Category Name : </td>
-			<td><input type="text" name="cname"></td>
-		</tr>
-			<td>Category Description : </td>
-			<td><input type="text" name="cdesc"></td>
-		</tr>
-		<tr>
-			<td align="center"><input type="submit" value="Add Category"></td>
-		</tr>
-	</table>	
-</form>
-</br>
-</br> --%>
-
 <div class="container">
   <h2>Manage Category</h2>
   </br>

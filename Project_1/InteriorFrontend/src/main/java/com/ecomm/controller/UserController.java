@@ -12,6 +12,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,6 +25,9 @@ import com.ecomm.model.UserDetail;
 @Controller
 public class UserController {
 
+	@Autowired
+	UserDetailDAO userdetailDAO;
+	
 	@Autowired
 	ProductDAO productDAO;
 	
@@ -78,5 +82,33 @@ public class UserController {
 			}
 		}
 		return page;
-	}	
+	}
+	
+	@RequestMapping(value="/userprofile")
+	public String showUserProfilePage(HttpSession session,Model m) {
+		String userName = (String) session.getAttribute("username");
+		UserDetail userDetail = userdetailDAO.getUserDetail(userName);
+		m.addAttribute("userDetail",userDetail);
+		return "UserProfile";
+	}
+	
+	@RequestMapping(value="/edituserdetail/{userName}")
+	public String editUserDetails(HttpSession session,Model m,@PathVariable("userName")String userName) {
+		
+		UserDetail userDetail = userdetailDAO.getUserDetail(userName);
+		m.addAttribute("userDetail",userDetail);
+		
+		return "UpdateUser";
+	}
+	@RequestMapping(value="/updateuserdetail",method=RequestMethod.POST)
+	public String updateUserDetails(@RequestParam("uname")String userName,@RequestParam("mobno")String mobileNo,@RequestParam("address")String address,Model m) {
+		
+		UserDetail userDetail = userdetailDAO.getUserDetail(userName);
+		userDetail.setMobileNo(mobileNo);
+		userDetail.setAddress(address);
+		
+		userdetailDAO.updateUserDetail(userDetail);
+		m.addAttribute("userDetail",userDetail);
+		return "UserProfile";
+	}
 }

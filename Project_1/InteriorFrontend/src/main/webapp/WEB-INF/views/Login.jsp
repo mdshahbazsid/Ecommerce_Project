@@ -3,14 +3,14 @@
 
 <div class="container">
   <h1 class="display-4">Login Form</h1>
-  </br>
+  
   <c:if test="${not empty error}">
-		<div class="error"><h6 style="color:red;">${error}</h6></div>
+		<span style="color:red;">${error}</span>
   </c:if>
   <c:if test="${not empty msg}">
-			<div class="msg"><h6 style="color:green;">${msg}</h6></div>
+		<span style="color:green;">${msg}</span>
   </c:if>
-  </br>
+
   <form action="perform_login" method="post">
 
     <div class="form-group">
@@ -19,10 +19,24 @@
     </div>
     <div class="form-group">
       <label for="pwd">Password :</label>
-      <input type="password" class="form-control" placeholder="Enter password" name="password" required="required">
+      <input type="password" class="form-control" placeholder="Enter password" name="password" required="required" id="myInput">
+      <input type="checkbox" onclick="myFunction()"> Show Password
     </div>
     <button type="submit" class="btn btn-primary">Login</button>
+    &nbsp;&nbsp;<span>Not have account ? <a style="color:red;" href="register">Register</a> </span>
   </form>
+  
 </div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
 
 <%@include file="Footer.jsp" %>

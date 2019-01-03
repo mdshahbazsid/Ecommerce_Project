@@ -50,6 +50,9 @@
       <li class="nav-item">
         <a class="nav-link" href="contactus">Contact Us</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="productdisplay">Show Products</a>
+      </li>
       <c:if test="${sessionScope.loggedIn}">
       <c:if test="${sessionScope.role=='ADMIN'}">
       <li class="nav-item dropdown">
@@ -66,11 +69,12 @@
       </li>
       </c:if>
       <c:if test="${sessionScope.role=='USER'}">
-      <li class="nav-item">
-        <a class="nav-link" href="productdisplay">Show Products</a>
-      </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="cart">My Cart</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="userprofile">My Profile</a>
       </li>
       </c:if>
       </c:if>
@@ -88,7 +92,7 @@
 	<div class="col">
 		<div class="container">
 			<div class="d-flex justify-content-end">
-			<h5>Hi!<f style="color:Blue;"> ${username}&nbsp;|&nbsp;</f><a href="${page.ConText.request.context.Path}/InteriorFrontend/perform_logout" class="btn btn-danger" role="button">Logout</a></h5>
+			<h5>Hi!<f style="color:Blue;"> ${username}&nbsp;|&nbsp;</f><a href="${page.ConText.request.context.Path}/InteriorFrontend/perform_logout" data-toggle="tooltip" data-placement="bottom" title="Logout!"><i class="fa fa-sign-out fa-1x" style="color:red;"></i></a></h5>
 		    </div>
 		</div>
 	</div>
@@ -102,4 +106,9 @@
   <!-- Bootstrap js file -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 

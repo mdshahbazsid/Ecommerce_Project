@@ -10,7 +10,7 @@
     <div class="col-md-4 col-sm-6 team-wrap">
       <div class="team-member text-center">
         <div class="team-img">
-          <img class="rounded-circle" src="<c:url value="/folder/images/my.jpg"/>" alt="image" width="200" height="200">
+          <img class="rounded-circle" src="<c:url value="/folder/images/user1.png"/>" alt="image" width="200" height="200">
           <div class="overlay">
             <div class="team-details text-center">
               <p>
