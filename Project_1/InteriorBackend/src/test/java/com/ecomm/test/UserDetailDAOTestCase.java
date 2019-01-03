@@ -74,6 +74,7 @@ static UserDetailDAO userdetailDAO;
 	@Ignore
 	@Test
 	public void listUsersTest() {
+	
 		
 		List<UserDetail> listUsers = userdetailDAO.listUsers();
 		
@@ -91,34 +92,5 @@ static UserDetailDAO userdetailDAO;
 			
 		}
 	}
-	@Ignore
-	@Test
-	public void checkingUsers() {
-		
-		if(userdetailDAO.userNames("hhh")) 
-			System.out.println("Exist");
-		
-		else 
-			System.out.println("Not Exist");
-		
-		
-		/*List<UserDetail> listUsers = userdetailDAO.listUsers();
-		
-		assertTrue("Problem in Fetching The UserName",listUsers.size()>0);
-		
-		ArrayList userNames = new ArrayList();
-			for(UserDetail user : listUsers)
-			{
-				userNames.add(user.getUserName());
-			}
-			
-			if(userNames.contains("o"))
-			{
-				System.out.println("User Exist");
-			}
-			else 
-			{
-				System.out.println("User Not Exist");
-			}*/
-	}	
+	
 }

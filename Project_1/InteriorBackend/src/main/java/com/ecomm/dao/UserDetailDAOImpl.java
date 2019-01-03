@@ -92,33 +92,4 @@ public class UserDetailDAOImpl implements UserDetailDAO {
 		}
 	}
 
-	@Override
-	public boolean userNames(String userName) {
-		try
-		{
-			Session session = sessionFactory.openSession();
-			Query query = session.createQuery("from UserDetail");
-			List<UserDetail> listUsers = query.list();
-			session.close();
-			ArrayList userNames = new ArrayList();
-			for(UserDetail user : listUsers)
-			{
-				userNames.add(user.getUserName());
-			}
-			
-			if(userNames.contains(userName))
-			{
-				return true;
-			}
-			else 
-			{
-				return false;
-			}
-		}
-		catch (Exception e) 
-		{
-			return false;
-		}
-	}
-
 }
