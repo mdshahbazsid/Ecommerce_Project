@@ -9,11 +9,11 @@
   <form action="<c:url value="/addcategory"/>" method="post">
     <div class="form-group">
       <label for="text">Category Name :</label>
-      <input type="text" class="form-control" placeholder="Enter Category Name" name="cname">
+      <input type="text" class="form-control" placeholder="Enter Category Name" name="cname" required="required">
     </div>
     <div class="form-group">
       <label for="text">Category Description :</label>
-      <input type="text" class="form-control" placeholder="Enter Category Description" name="cdesc">
+      <input type="text" class="form-control" placeholder="Enter Category Description" name="cdesc" required="required">
     </div>
     <button type="submit" class="btn btn-outline-primary">Add Category</button>
   </form>

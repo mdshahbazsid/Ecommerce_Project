@@ -9,11 +9,11 @@
   <form action="<c:url value="/addsupplier"/>" method="post">
     <div class="form-group">
       <label for="text">Supplier Name :</label>
-      <input type="text" class="form-control" placeholder="Enter Supplier Name" name="sname">
+      <input type="text" class="form-control" placeholder="Enter Supplier Name" name="sname" required="required">
     </div>
     <div class="form-group">
       <label for="text">Supplier Address :</label>
-      <input type="text" class="form-control" placeholder="Enter Supplier Address" name="sadd">
+      <input type="text" class="form-control" placeholder="Enter Supplier Address" name="sadd" required="required">
     </div>
     <button type="submit" class="btn btn-outline-primary">Add Supplier</button>
   </form>

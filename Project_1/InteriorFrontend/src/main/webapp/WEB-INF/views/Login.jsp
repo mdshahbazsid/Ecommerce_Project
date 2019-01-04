@@ -5,10 +5,10 @@
   <h1 class="display-4">Login Form</h1>
   
   <c:if test="${not empty error}">
-		<span style="color:red;">${error}</span>
+		<span style="color:red;"><b>${error}</b></span>
   </c:if>
   <c:if test="${not empty msg}">
-		<span style="color:green;">${msg}</span>
+		<span style="color:green;"><b>${msg}</b></span>
   </c:if>
 
   <form action="perform_login" method="post">
@@ -31,7 +31,7 @@
 <script>
 function myFunction() {
   var x = document.getElementById("myInput");
-  if (x.type === "password") {
+  if (x.type == "password") {
     x.type = "text";
   } else {
     x.type = "password";
