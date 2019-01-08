@@ -187,6 +187,15 @@ public class ProductController {
 	public String displayProduct(Model m) {
 		
 		m.addAttribute("productlist",productDAO.listProducts());
+		m.addAttribute("categoryList",categoryDAO.listCategories());
+		return "ProductDisplay";
+	}
+	
+	@RequestMapping(value="/productdisplay/{cid}")
+	public String displayProductByCategory(Model m,@PathVariable("cid")int categoryId) {
+		
+		m.addAttribute("productlist",productDAO.listProductByCategory(categoryId));
+		m.addAttribute("categoryList",categoryDAO.listCategories());
 		return "ProductDisplay";
 	}
 	

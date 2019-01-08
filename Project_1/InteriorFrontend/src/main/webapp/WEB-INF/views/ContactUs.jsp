@@ -27,7 +27,7 @@
     <div class="col-sm-3 col-xs-6 fourth-box">
     	<h1><i class="fa fa-envelope" style="font-size:24px;" aria-hidden="true"></i></h1>
         <h4>Mail</h4>
-        <p>mdshahbazsid@gmail.com</p><br>
+        <p>xyz@gmail.com</p><br>
     </div>
 	</div>
 </div>

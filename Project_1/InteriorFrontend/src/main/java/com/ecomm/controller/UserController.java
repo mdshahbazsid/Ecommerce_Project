@@ -68,7 +68,7 @@ public class UserController {
 			{
 				loggedIn=true;
 				
-				page="ProductDisplay";
+				page="redirect:/productdisplay";
 				m.addAttribute("productlist",productDAO.listProducts());
 				session.setAttribute("loggedIn",loggedIn);
 				session.setAttribute("username",username);

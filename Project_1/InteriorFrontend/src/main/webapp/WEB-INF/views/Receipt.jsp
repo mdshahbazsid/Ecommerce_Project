@@ -78,7 +78,7 @@
                             <td>   </td>
                             <td>   </td>
                             <td class="text-right"><strong>Total: </strong></td>
-                            <td class="text-center text-danger"><strong>Rs ${totalCartAmount+totalCartAmount}/-</strong></td>
+                            <td class="text-center text-danger"><strong>Rs ${totalCartAmount}/-</strong></td>
                         </tr>
                     </tbody>
                 </table>
